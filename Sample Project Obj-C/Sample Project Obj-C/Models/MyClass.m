@@ -9,25 +9,31 @@
 
 @interface MyClass()
 
-@property (nonatomic, strong) NSString *name;
-
 @end
 
 @implementation MyClass
 
-- (instancetype)init {
-    return [self initWithName:@"John"];
-}
-
-- (instancetype)initWithName:(NSString *)name {
+/// Designated Initializer
+- (instancetype)initWithName:(NSMutableString *)name {
     self = [super init];
     if (self) {
-        _name = name;
+        //_name = name;
+        _name = [name copy];
     }
     return self;
 }
 
-- (void)print {
+/// Convenience Initializer
+- (instancetype)init {
+    NSMutableString *name = [NSMutableString stringWithString:@"John"];
+    return [self initWithName:name];
+}
+
+- (void)dealloc {
+    NSLog(@"Object deallocated");
+}
+
+- (void)test {
     NSLog(@"Hello %@!", self.name);
 }
 

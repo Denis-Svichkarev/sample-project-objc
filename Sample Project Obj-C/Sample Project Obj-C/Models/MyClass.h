@@ -11,8 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MyClass : NSObject
 
-- (instancetype)initWithName:(NSString *)name;
-- (void)print;
+@property (nonatomic, strong) NSMutableString *name;
+
+- (instancetype)initWithName:(NSMutableString *)name;
+- (void)test;
 
 @end
 

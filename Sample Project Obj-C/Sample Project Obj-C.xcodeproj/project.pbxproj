@@ -59,6 +59,7 @@
 		25C1799A2C78E6FC00202C6D /* Sample Project Obj-CUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sample Project Obj-CUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C1799E2C78E6FC00202C6D /* Sample_Project_Obj_CUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sample_Project_Obj_CUITests.m; sourceTree = "<group>"; };
 		25C179A02C78E6FC00202C6D /* Sample_Project_Obj_CUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sample_Project_Obj_CUITestsLaunchTests.m; sourceTree = "<group>"; };
+		25C31E512C7B618C00C7980E /* MyStruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyStruct.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +92,7 @@
 			children = (
 				2575F7562C7A6CF800263F70 /* MyClass.h */,
 				2575F7572C7A6CF800263F70 /* MyClass.m */,
+				25C31E512C7B618C00C7980E /* MyStruct.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";

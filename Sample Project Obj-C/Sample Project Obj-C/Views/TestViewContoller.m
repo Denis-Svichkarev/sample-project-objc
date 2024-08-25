@@ -7,6 +7,7 @@
 
 #import "TestViewContoller.h"
 #import "MyClass.h"
+#import "MyStruct.h"
 
 @interface TestViewContoller ()
 
@@ -17,9 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    MyClass *class = [[MyClass alloc] initWithName:@"James"];
-    [class print];
+    NSMutableString *sharedName = [NSMutableString stringWithString:@"James"];
+        
+    MyClass *object = [[MyClass alloc] initWithName:sharedName];
+    
+    [object test];
+    [sharedName setString:@"John"];
+    [object test];
+    
+    MyStruct myStruct = {@"James"};
+    NSLog(@"%@", myStruct.name);
 }
-
 
 @end
