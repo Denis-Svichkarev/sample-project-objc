@@ -20,6 +20,7 @@
 		25C1799F2C78E6FC00202C6D /* Sample_Project_Obj_CUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C1799E2C78E6FC00202C6D /* Sample_Project_Obj_CUITests.m */; };
 		25C179A12C78E6FC00202C6D /* Sample_Project_Obj_CUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C179A02C78E6FC00202C6D /* Sample_Project_Obj_CUITestsLaunchTests.m */; };
 		25C31E562C7B950800C7980E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C31E552C7B950800C7980E /* Person.m */; };
+		25C31E5B2C7D1DF300C7980E /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C31E5A2C7D1DF300C7980E /* Animal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		25C31E512C7B618C00C7980E /* MyStruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyStruct.h; sourceTree = "<group>"; };
 		25C31E542C7B950800C7980E /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		25C31E552C7B950800C7980E /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		25C31E592C7D1DF300C7980E /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		25C31E5A2C7D1DF300C7980E /* Animal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 				25C31E512C7B618C00C7980E /* MyStruct.h */,
 				25C31E542C7B950800C7980E /* Person.h */,
 				25C31E552C7B950800C7980E /* Person.m */,
+				25C31E592C7D1DF300C7980E /* Animal.h */,
+				25C31E5A2C7D1DF300C7980E /* Animal.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				25C31E562C7B950800C7980E /* Person.m in Sources */,
 				25C1797D2C78E6F900202C6D /* TestViewContoller.m in Sources */,
 				25C179772C78E6F900202C6D /* AppDelegate.m in Sources */,
+				25C31E5B2C7D1DF300C7980E /* Animal.m in Sources */,
 				25C1797A2C78E6F900202C6D /* SceneDelegate.m in Sources */,
 				25C179832C78E6F900202C6D /* Sample_Project_Obj_C.xcdatamodeld in Sources */,
 			);

@@ -15,18 +15,19 @@
 
 @implementation Person
 
-- (instancetype)initWithName:(NSString *)name age:(NSInteger)age {
+- (instancetype)initWithFirstName:(NSString *)firstName LastName:(NSString *)lastName age:(NSInteger)age {
     self = [super init];
     if (self) {
-        _name = name;
+        _firstName = firstName;
+        _lastName = lastName;
         _age = age;
         _employed = YES;
     }
     return self;
 }
 
-- (NSString *)getOfficialName {
-    return [NSString stringWithFormat:@"[%@]", _name];
+- (NSString *)getFullName {
+    return [NSString stringWithFormat:@"%@ %@", _firstName, _lastName];
 }
 
 - (NSInteger)getAge {
@@ -44,7 +45,11 @@
 }
 
 - (void)greet {
-    NSLog(@"Hello, my name is %@ and I am %ld years old.", self.name, (long)[self getAge]);
+    NSLog(@"Hello, my name is %@ and I am %ld years old.", self.firstName, (long)[self getAge]);
+}
+
+- (void)dealloc {
+    NSLog(@"%@ is being deinitialized", self.firstName);
 }
 
 @end

@@ -9,6 +9,7 @@
 #import "MyClass.h"
 #import "MyStruct.h"
 #import "Person.h"
+#import "Animal.h"
 
 @interface TestViewContoller ()
 
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self testGettersAndSetters];
+    [self testObjectReferences];
 }
 
 - (void)testInitializers {
@@ -36,13 +37,28 @@
 }
 
 - (void)testGettersAndSetters {
-    Person *person = [[Person alloc] initWithName:@"John" age:20];
+    Person *person = [[Person alloc] initWithFirstName:@"John" LastName:@"Smith" age:20];
     [person setAge:30];
     [person greet];
     
     if ([person isEmployed]) {
-        NSLog(@"%@", [person getOfficialName]);
+        NSLog(@"%@", [person getFullName]);
     }
+}
+
+- (void)testObjectReferences {
+    Person *person = [[Person alloc] initWithFirstName:@"John" LastName:@"Smith" age:20];
+    Animal *pet = [[Animal alloc] initWithName:@"Charlie" owner:person];
+    person.pet = pet;
+    person = nil;
+        
+//    var person: Person? = Person(firstName: "John", lastName: "Smith", age: 20)
+//    let pet = Animal(name: "Charlie", owner: person!)
+//    person?.pet = pet
+//    person = nil
+//
+//    /// Leads to crash
+//    /// print(pet.owner.firstName)
 }
 
 @end

@@ -6,18 +6,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Animal.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Person : NSObject
 
-@property (nonatomic, getter=getOfficialName) NSString *name;
+@property (nonatomic) NSString *firstName;
+@property (nonatomic) NSString *lastName;
+
 @property (nonatomic, getter=isEmployed) BOOL employed;
 
-- (instancetype)initWithName:(NSString *)name age:(NSInteger)age;
+@property (nonatomic) Animal *pet;
+
+- (instancetype)initWithFirstName:(NSString *)firstName LastName:(NSString *)lastName age:(NSInteger)age;
 
 - (NSInteger)getAge;
 - (void)setAge:(NSInteger)age;
+- (NSString *)getFullName;
 
 - (void)greet;
 
