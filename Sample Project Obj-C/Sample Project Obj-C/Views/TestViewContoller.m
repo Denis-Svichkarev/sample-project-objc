@@ -48,17 +48,31 @@
 
 - (void)testObjectReferences {
     Person *person = [[Person alloc] initWithFirstName:@"John" LastName:@"Smith" age:20];
+    [person addObserver:self
+             forKeyPath:@"age"
+                options:NSKeyValueObservingOptionNew
+                context:nil];
+    
     Animal *pet = [[Animal alloc] initWithName:@"Charlie" owner:person];
     person.pet = pet;
+    
+    [person setAge:30];
+    [person walkTheDog];
+    [person setAge:31];
+    
+    [person removeObserver:self forKeyPath:@"age"];
+    
     person = nil;
-        
-//    var person: Person? = Person(firstName: "John", lastName: "Smith", age: 20)
-//    let pet = Animal(name: "Charlie", owner: person!)
-//    person?.pet = pet
-//    person = nil
-//
-//    /// Leads to crash
-//    /// print(pet.owner.firstName)
+    pet = nil;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary<NSKeyValueChangeKey, id> *)change
+                       context:(void *)context {
+    if ([keyPath isEqualToString:@"age"]) {
+        NSLog(@"Person's age changed to %@", change[NSKeyValueChangeNewKey]);
+    }
 }
 
 @end

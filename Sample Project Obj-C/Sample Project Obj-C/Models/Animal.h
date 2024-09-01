@@ -9,6 +9,8 @@
 
 @class Person;
 
+typedef void (^CompletionBlock)(BOOL success);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Animal : NSObject
@@ -17,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) Person *owner;
 
 - (instancetype)initWithName:(NSString *)name owner:(Person *)owner;
+
+- (void)barkWithCompletion:(CompletionBlock)completion;
 
 @end
 

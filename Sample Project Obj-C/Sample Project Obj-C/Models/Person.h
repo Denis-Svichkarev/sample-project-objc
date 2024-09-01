@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)getFullName;
 
 - (void)greet;
+- (void)walkTheDog;
 
 @end
 

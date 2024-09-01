@@ -48,6 +48,14 @@
     NSLog(@"Hello, my name is %@ and I am %ld years old.", self.firstName, (long)[self getAge]);
 }
 
+- (void)walkTheDog {
+    [self.pet barkWithCompletion:^(BOOL success) {
+        if (success) {
+            NSLog(@"%@: Good dog!", self.pet.name);
+        }
+    }];
+}
+
 - (void)dealloc {
     NSLog(@"%@ is being deinitialized", self.firstName);
 }

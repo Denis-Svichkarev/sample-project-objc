@@ -19,6 +19,23 @@
     return self;
 }
 
+- (void)barkWithCompletion:(CompletionBlock)completion {
+    NSLog(@"%@ is barking...", self.name);
+    __weak typeof(self) weakSelf = self;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (strongSelf) {
+            NSLog(@"%@ finished barking", strongSelf.name);
+            if (completion) {
+                completion(YES);
+            }
+        } else {
+            NSLog(@"Object is deallocated, unable to access name.");
+        }
+    });
+}
+
 - (void)dealloc {
     NSLog(@"%@ is being deinitialized", self.name);
 }
