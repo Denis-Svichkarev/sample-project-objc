@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self testObjectReferences];
+    [self testXcodeInstruments];
 }
 
 - (void)testInitializers {
@@ -73,6 +73,17 @@
     if ([keyPath isEqualToString:@"age"]) {
         NSLog(@"Person's age changed to %@", change[NSKeyValueChangeNewKey]);
     }
+}
+
+- (void)testXcodeInstruments {
+    Person *person = [[Person alloc] initWithFirstName:@"John" LastName:@"Smith" age:20];
+    Person *person2 = [[Person alloc] initWithFirstName:@"Jane" LastName:@"Smith" age:25];
+    
+    [person addFriend:person2];
+    [person2 addFriend:person];
+    [person2 addFriend:person];
+    
+    [person2 methodWithMistake];
 }
 
 @end

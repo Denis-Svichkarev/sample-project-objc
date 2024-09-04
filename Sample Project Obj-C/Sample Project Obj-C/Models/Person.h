@@ -12,12 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Person : NSObject
 
-@property (nonatomic) NSString *firstName;
-@property (nonatomic) NSString *lastName;
+@property (nonatomic, strong) NSString *firstName;
+@property (nonatomic, strong) NSString *lastName;
 
-@property (nonatomic, getter=isEmployed) BOOL employed;
+@property (nonatomic, assign, getter=isEmployed) BOOL employed;
 
-@property (nonatomic) Animal *pet;
+@property (nonatomic, strong) Animal *pet;
+//@property (nonatomic, strong) NSHashTable *friends; // for unique elements
+@property (nonatomic, strong) NSPointerArray *friends;
 
 - (instancetype)initWithFirstName:(NSString *)firstName LastName:(NSString *)lastName age:(NSInteger)age;
 
@@ -27,6 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)greet;
 - (void)walkTheDog;
+
+- (void)addFriend:(Person *)person;
+- (nonnull NSString *)methodWithMistake;
 
 @end
 

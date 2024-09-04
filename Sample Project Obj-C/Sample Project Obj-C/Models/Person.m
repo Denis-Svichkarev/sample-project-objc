@@ -22,6 +22,8 @@
         _lastName = lastName;
         _age = age;
         _employed = YES;
+        // _friends = [NSHashTable weakObjectsHashTable]; // for unique elements
+        _friends = [NSPointerArray weakObjectsPointerArray];
     }
     return self;
 }
@@ -54,6 +56,17 @@
             NSLog(@"%@: Good dog!", self.pet.name);
         }
     }];
+}
+- (void)addFriend:(Person *)person {
+    [self.friends addPointer:(__bridge void * _Nullable)person];
+}
+
+- (nonnull NSString *)methodWithMistake {
+    // Static analyzer test
+    // NSString *string;
+    
+    NSString *string = [NSString string];
+    return string;
 }
 
 - (void)dealloc {
