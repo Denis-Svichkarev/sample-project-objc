@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self testSelectors];
+    [self testGettersAndSetters];
 }
 
 - (void)testInitializers {

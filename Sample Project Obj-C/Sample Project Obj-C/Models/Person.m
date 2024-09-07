@@ -6,6 +6,7 @@
 //
 
 #import "Person.h"
+#import <objc/runtime.h>
 
 @interface Person()
 
@@ -48,6 +49,39 @@
 
 - (void)greet {
     NSLog(@"Hello, my name is %@ and I am %ld years old.", self.firstName, (long)[self getAge]);
+}
+
+- (void)swizzled_greet {
+    NSLog(@"Before original sayHello");
+    [self swizzled_greet];
+    NSLog(@"After original sayHello");
+}
+
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class class = [self class];
+        
+        SEL originalSelector = @selector(greet);
+        SEL swizzledSelector = @selector(swizzled_greet);
+        
+        Method originalMethod = class_getInstanceMethod(class, originalSelector);
+        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+        
+        BOOL didAddMethod = class_addMethod(class,
+                                            originalSelector,
+                                            method_getImplementation(swizzledMethod),
+                                            method_getTypeEncoding(swizzledMethod));
+        
+        if (didAddMethod) {
+            class_replaceMethod(class,
+                                swizzledSelector,
+                                method_getImplementation(originalMethod),
+                                method_getTypeEncoding(originalMethod));
+        } else {
+            method_exchangeImplementations(originalMethod, swizzledMethod);
+        }
+    });
 }
 
 - (void)walkTheDog {
