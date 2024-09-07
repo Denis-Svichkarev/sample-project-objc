@@ -19,6 +19,10 @@
     return self;
 }
 
+- (void)bark {
+    NSLog(@"%@ is barking...", self.name);
+}
+
 - (void)barkWithCompletion:(CompletionBlock)completion {
     NSLog(@"%@ is barking...", self.name);
     __weak typeof(self) weakSelf = self;

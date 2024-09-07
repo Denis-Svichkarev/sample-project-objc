@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithName:(NSString *)name owner:(Person *)owner;
 
+- (void)bark;
 - (void)barkWithCompletion:(CompletionBlock)completion;
 
 @end

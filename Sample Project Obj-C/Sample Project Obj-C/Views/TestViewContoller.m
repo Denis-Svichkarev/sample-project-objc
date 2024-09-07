@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self testXcodeInstruments];
+    [self testSelectors];
 }
 
 - (void)testInitializers {
@@ -44,6 +44,11 @@
     if ([person isEmployed]) {
         NSLog(@"%@", [person getFullName]);
     }
+    
+    // KVC (Key-Value Coding)
+    [person setValue:@"James" forKey:@"firstName"];
+    NSString *name = [person valueForKey:@"firstName"];
+    NSLog(@"Name: %@", name);
 }
 
 - (void)testObjectReferences {
@@ -84,6 +89,29 @@
     [person2 addFriend:person];
     
     [person2 methodWithMistake];
+}
+
+- (void)testSelectors {
+    Person *person = [[Person alloc] initWithFirstName:@"John" LastName:@"Smith" age:20];
+    [person setAge:30];
+    
+    Animal *pet = [[Animal alloc] initWithName:@"Charlie" owner:person];
+    person.pet = pet;
+    
+    [person performSelector:@selector(bark)];
+    
+    SEL methodSelector = @selector(someMethod);
+    if ([self respondsToSelector:methodSelector]) {
+        NSMethodSignature *signature = [self methodSignatureForSelector:methodSelector];
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+        [invocation setSelector:methodSelector];
+        [invocation setTarget:self];
+        [invocation invoke];
+    }
+}
+
+- (void)someMethod {
+    NSLog(@"someMethod is called.");
 }
 
 @end

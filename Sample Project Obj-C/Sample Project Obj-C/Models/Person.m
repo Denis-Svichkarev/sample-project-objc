@@ -69,6 +69,13 @@
     return string;
 }
 
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    if (aSelector == @selector(bark)) {
+        return self.pet;
+    }
+    return [super forwardingTargetForSelector:aSelector];
+}
+
 - (void)dealloc {
     NSLog(@"%@ is being deinitialized", self.firstName);
 }
