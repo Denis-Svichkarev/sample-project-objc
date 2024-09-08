@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self testGettersAndSetters];
+    [self testExceptions];
 }
 
 - (void)testInitializers {
@@ -112,6 +112,33 @@
 
 - (void)someMethod {
     NSLog(@"someMethod is called.");
+}
+
+- (void)testExceptions {
+    @try {
+        NSArray *array = @[@"One", @"Two", @"Three"];
+        NSLog(@"%@", array[5]);
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Caught an exception: %@", exception.name);
+        NSLog(@"Reason: %@", exception.reason);
+    }
+    @finally {
+        NSLog(@"This will always execute, exception or not.");
+    }
+    
+    NSException *exception = [NSException exceptionWithName:@"CustomException"
+                                                     reason:@"Something went wrong!"
+                                                   userInfo:nil];
+//    @throw exception;
+    
+    NSError *error;
+    NSString *content = [NSString stringWithContentsOfFile:@"path/to/file.txt"
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:&error];
+    if (error) {
+        NSLog(@"Failed to read the file: %@", error.localizedDescription);
+    }
 }
 
 @end
