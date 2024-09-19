@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2575F7552C7A568D00263F70 /* TestViewContoller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2575F7542C7A568D00263F70 /* TestViewContoller.xib */; };
+		2575F7582C7A6CF800263F70 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2575F7572C7A6CF800263F70 /* MyClass.m */; };
 		25C179772C78E6F900202C6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C179762C78E6F900202C6D /* AppDelegate.m */; };
 		25C1797A2C78E6F900202C6D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C179792C78E6F900202C6D /* SceneDelegate.m */; };
-		25C1797D2C78E6F900202C6D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C1797C2C78E6F900202C6D /* ViewController.m */; };
-		25C179802C78E6F900202C6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C1797E2C78E6F900202C6D /* Main.storyboard */; };
+		25C1797D2C78E6F900202C6D /* TestViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C1797C2C78E6F900202C6D /* TestViewContoller.m */; };
 		25C179832C78E6F900202C6D /* Sample_Project_Obj_C.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25C179812C78E6F900202C6D /* Sample_Project_Obj_C.xcdatamodeld */; };
 		25C179852C78E6FC00202C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C179842C78E6FC00202C6D /* Assets.xcassets */; };
 		25C179882C78E6FC00202C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C179862C78E6FC00202C6D /* LaunchScreen.storyboard */; };
@@ -18,6 +19,8 @@
 		25C179952C78E6FC00202C6D /* Sample_Project_Obj_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C179942C78E6FC00202C6D /* Sample_Project_Obj_CTests.m */; };
 		25C1799F2C78E6FC00202C6D /* Sample_Project_Obj_CUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C1799E2C78E6FC00202C6D /* Sample_Project_Obj_CUITests.m */; };
 		25C179A12C78E6FC00202C6D /* Sample_Project_Obj_CUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C179A02C78E6FC00202C6D /* Sample_Project_Obj_CUITestsLaunchTests.m */; };
+		25C31E562C7B950800C7980E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C31E552C7B950800C7980E /* Person.m */; };
+		25C31E5B2C7D1DF300C7980E /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C31E5A2C7D1DF300C7980E /* Animal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,14 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2575F7542C7A568D00263F70 /* TestViewContoller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewContoller.xib; sourceTree = "<group>"; };
+		2575F7562C7A6CF800263F70 /* MyClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
+		2575F7572C7A6CF800263F70 /* MyClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
 		25C179722C78E6F900202C6D /* Sample Project Obj-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample Project Obj-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C179752C78E6F900202C6D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		25C179762C78E6F900202C6D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		25C179782C78E6F900202C6D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		25C179792C78E6F900202C6D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		25C1797B2C78E6F900202C6D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		25C1797C2C78E6F900202C6D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		25C1797F2C78E6F900202C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		25C1797B2C78E6F900202C6D /* TestViewContoller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewContoller.h; sourceTree = "<group>"; };
+		25C1797C2C78E6F900202C6D /* TestViewContoller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewContoller.m; sourceTree = "<group>"; };
 		25C179822C78E6F900202C6D /* Sample_Project_Obj_C.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sample_Project_Obj_C.xcdatamodel; sourceTree = "<group>"; };
 		25C179842C78E6FC00202C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25C179872C78E6FC00202C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +61,11 @@
 		25C1799A2C78E6FC00202C6D /* Sample Project Obj-CUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sample Project Obj-CUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C1799E2C78E6FC00202C6D /* Sample_Project_Obj_CUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sample_Project_Obj_CUITests.m; sourceTree = "<group>"; };
 		25C179A02C78E6FC00202C6D /* Sample_Project_Obj_CUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sample_Project_Obj_CUITestsLaunchTests.m; sourceTree = "<group>"; };
+		25C31E512C7B618C00C7980E /* MyStruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyStruct.h; sourceTree = "<group>"; };
+		25C31E542C7B950800C7980E /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		25C31E552C7B950800C7980E /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		25C31E592C7D1DF300C7980E /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		25C31E5A2C7D1DF300C7980E /* Animal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2575F74F2C7A560D00263F70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2575F7562C7A6CF800263F70 /* MyClass.h */,
+				2575F7572C7A6CF800263F70 /* MyClass.m */,
+				25C31E512C7B618C00C7980E /* MyStruct.h */,
+				25C31E542C7B950800C7980E /* Person.h */,
+				25C31E552C7B950800C7980E /* Person.m */,
+				25C31E592C7D1DF300C7980E /* Animal.h */,
+				25C31E5A2C7D1DF300C7980E /* Animal.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2575F7502C7A561A00263F70 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				25C179752C78E6F900202C6D /* AppDelegate.h */,
+				25C179762C78E6F900202C6D /* AppDelegate.m */,
+				25C179782C78E6F900202C6D /* SceneDelegate.h */,
+				25C179792C78E6F900202C6D /* SceneDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2575F7512C7A562A00263F70 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25C179842C78E6FC00202C6D /* Assets.xcassets */,
+				25C179862C78E6FC00202C6D /* LaunchScreen.storyboard */,
+				25C179892C78E6FC00202C6D /* Info.plist */,
+				25C179812C78E6F900202C6D /* Sample_Project_Obj_C.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2575F7522C7A565D00263F70 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				2575F7542C7A568D00263F70 /* TestViewContoller.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		2575F7532C7A566C00263F70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25C1797B2C78E6F900202C6D /* TestViewContoller.h */,
+				25C1797C2C78E6F900202C6D /* TestViewContoller.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		25C179692C78E6F900202C6D = {
 			isa = PBXGroup;
 			children = (
@@ -106,18 +169,12 @@
 		25C179742C78E6F900202C6D /* Sample Project Obj-C */ = {
 			isa = PBXGroup;
 			children = (
-				25C179752C78E6F900202C6D /* AppDelegate.h */,
-				25C179762C78E6F900202C6D /* AppDelegate.m */,
-				25C179782C78E6F900202C6D /* SceneDelegate.h */,
-				25C179792C78E6F900202C6D /* SceneDelegate.m */,
-				25C1797B2C78E6F900202C6D /* ViewController.h */,
-				25C1797C2C78E6F900202C6D /* ViewController.m */,
-				25C1797E2C78E6F900202C6D /* Main.storyboard */,
-				25C179842C78E6FC00202C6D /* Assets.xcassets */,
-				25C179862C78E6FC00202C6D /* LaunchScreen.storyboard */,
-				25C179892C78E6FC00202C6D /* Info.plist */,
+				2575F7502C7A561A00263F70 /* App */,
+				2575F74F2C7A560D00263F70 /* Models */,
+				2575F7532C7A566C00263F70 /* Views */,
+				2575F7522C7A565D00263F70 /* XIBs */,
+				2575F7512C7A562A00263F70 /* Resources */,
 				25C1798A2C78E6FC00202C6D /* main.m */,
-				25C179812C78E6F900202C6D /* Sample_Project_Obj_C.xcdatamodeld */,
 			);
 			path = "Sample Project Obj-C";
 			sourceTree = "<group>";
@@ -244,7 +301,7 @@
 			files = (
 				25C179882C78E6FC00202C6D /* LaunchScreen.storyboard in Resources */,
 				25C179852C78E6FC00202C6D /* Assets.xcassets in Resources */,
-				25C179802C78E6F900202C6D /* Main.storyboard in Resources */,
+				2575F7552C7A568D00263F70 /* TestViewContoller.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +326,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2575F7582C7A6CF800263F70 /* MyClass.m in Sources */,
 				25C1798B2C78E6FC00202C6D /* main.m in Sources */,
-				25C1797D2C78E6F900202C6D /* ViewController.m in Sources */,
+				25C31E562C7B950800C7980E /* Person.m in Sources */,
+				25C1797D2C78E6F900202C6D /* TestViewContoller.m in Sources */,
 				25C179772C78E6F900202C6D /* AppDelegate.m in Sources */,
+				25C31E5B2C7D1DF300C7980E /* Animal.m in Sources */,
 				25C1797A2C78E6F900202C6D /* SceneDelegate.m in Sources */,
 				25C179832C78E6F900202C6D /* Sample_Project_Obj_C.xcdatamodeld in Sources */,
 			);
@@ -310,14 +370,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		25C1797E2C78E6F900202C6D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				25C1797F2C78E6F900202C6D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		25C179862C78E6FC00202C6D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -381,7 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -436,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -454,12 +506,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 74KE6VKKSF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Sample Project Obj-C/Info.plist";
+				INFOPLIST_FILE = "Sample Project Obj-C/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,12 +533,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 74KE6VKKSF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Sample Project Obj-C/Info.plist";
+				INFOPLIST_FILE = "Sample Project Obj-C/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
